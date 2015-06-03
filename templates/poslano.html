@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Poslano</title>
+
+
+</head>
+<body style="background-color: #0066CC">
+    <h1>Zavihek poslana sporocila</h1>
+
+    <p>Prikazi seznam poslanih sporocil</p>
+
+    {% for sporocilo in bmail %}
+        <p><a href="/sporocilo/{{ sporocilo.key.id() }}">{{ sporocilo.vnos }}, {{ sporocilo.key.id() }}, {{ sporocilo.nastanek }}</a></p>
+    {% endfor %}
+
+    <p>Sporocilo je bilo uspesno poslano</p>
+</body>
+</html>
